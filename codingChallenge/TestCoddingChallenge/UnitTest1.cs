@@ -21,5 +21,20 @@ namespace TestCoddingChallenge
             Assert.AreEqual(expect, actual);
 
         }
+
+        [TestMethod]
+        public void TestCheckPapalindrome1()
+        {
+            //Arrange
+            string str = "never Odd, or Even";
+            bool expect = true;
+
+            //Action
+            bool actual = str.CheckPapalindrome();
+
+            //Assert
+            Assert.AreEqual(expect, actual);
+
+        }
     }
 }

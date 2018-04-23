@@ -14,8 +14,9 @@ namespace codingChallenge
 
             for (int i = 0, j = str.Length - 1; i < j; i++,j-- )
             {
-                if (str[i] == ' ') i++;
-                if (str[j] == ' ') j--;
+                while((str[i] == ' ' )|| (str[i] == ',')) i++;
+                while((str[j] == ' ') || (str[j] == ',')) j--;
+                
                 if (str.ToUpper()[i] != str.ToUpper()[j])
                 {
                     result = false;
