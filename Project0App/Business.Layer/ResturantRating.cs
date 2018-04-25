@@ -12,6 +12,11 @@ namespace Business.Layer
         public string Author { get; set; }
         public string Comments { get; set; }
 
+        public ResturantRating()
+        {
+
+        }
+
         public ResturantRating(int r, string au, string com)
         {
             Rating = r;

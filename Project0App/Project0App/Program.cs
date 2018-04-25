@@ -15,13 +15,7 @@ namespace Project0App
         }
         static void Main(string[] args)
         {
-            BusinessLayer bl = new BusinessLayer();
-            int menuOption = 0;
-            bool Quit = false;
-            showMenu();
-            Console.ReadLine();
-
-
+            
         }
     }
 }

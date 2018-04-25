@@ -3,20 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Business.Layer
 {
+    [XmlRoot("ArrayOfResturant")]
+    public class MyList<Resturant> : List<Resturant>
+    {
+        public MyList() 
+        {
+            list = new List<Resturant>();
+        }
+        [XmlElement("Resturant")]
+        public List<Resturant> list { get; set;}
+    }
     public class Resturant
     {
-        public List<ResturantRating> Ratings { get; }
+        //public C { get; }
         public string Name { get; set; }
         public string Location { get; set; }
         public string FoodType { get; set; }
-         
+        public List<ResturantRating> Ratings = new List<ResturantRating>();
 
         public Resturant()
         {
-
         }
 
         public float GetAverageRating()
@@ -33,6 +43,7 @@ namespace Business.Layer
         
         public void AddRating(ResturantRating r)
         {
+            //if(Ratings == null)Ratings = new List<ResturantRating>();
             Ratings.Add(r);
         }
         

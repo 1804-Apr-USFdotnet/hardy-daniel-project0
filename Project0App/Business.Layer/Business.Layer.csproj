@@ -44,6 +44,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resturant.cs" />
     <Compile Include="ResturantRating.cs" />
+    <Compile Include="Serializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Data.Layer\Data.Layer.csproj">

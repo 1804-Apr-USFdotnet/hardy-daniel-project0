@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfResturant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Resturant>
+    <Ratings>
+      <ResturantRating>
+        <Rating>3</Rating>
+        <Author>Daniel</Author>
+        <Comments>Good enviornment, needs cleaning</Comments>
+      </ResturantRating>
+      <ResturantRating>
+        <Rating>4</Rating>
+        <Author>Amy</Author>
+        <Comments>Good enviornment, Good Food</Comments>
+      </ResturantRating>
+      <ResturantRating>
+        <Rating>5</Rating>
+        <Author>Michael</Author>
+        <Comments>Food was HOOT, service was moderate</Comments>
+      </ResturantRating>
+    </Ratings>
+    <Name>Chili's</Name>
+    <Location>123 Homer st.</Location>
+    <FoodType>American</FoodType>
+  </Resturant>
+  <Resturant>
+    <Ratings>
+      <ResturantRating>
+        <Rating>4</Rating>
+        <Author>Jake</Author>
+        <Comments>Good enviornment, needs cleaning</Comments>
+      </ResturantRating>
+      <ResturantRating>
+        <Rating>4</Rating>
+        <Author>Dez</Author>
+        <Comments>Good enviornment, Good Food</Comments>
+      </ResturantRating>
+      <ResturantRating>
+        <Rating>1</Rating>
+        <Author>Steph</Author>
+        <Comments>Server was to chatty, service was slow</Comments>
+      </ResturantRating>
+    </Ratings>
+    <Name>AppleBee's</Name>
+    <Location>125 Homer st.</Location>
+    <FoodType>American</FoodType>
+  </Resturant>
+  <Resturant>
+    <Ratings>
+      <ResturantRating>
+        <Rating>4</Rating>
+        <Author>Rusty</Author>
+        <Comments>Food was GREAT, but super long wait</Comments>
+      </ResturantRating>
+      <ResturantRating>
+        <Rating>4</Rating>
+        <Author>Tammy</Author>
+        <Comments>Hot Food, Cold Drinks.. Great Experence</Comments>
+      </ResturantRating>
+      <ResturantRating>
+        <Rating>1</Rating>
+        <Author>Tamera</Author>
+        <Comments>My car got stolen from the parking lot, so sad</Comments>
+      </ResturantRating>
+    </Ratings>
+    <Name>Wood Ranch</Name>
+    <Location>125 N. Nebraska st.</Location>
+    <FoodType>BBQ</FoodType>
+  </Resturant>
+  <Resturant>
+    <Ratings>
+      <ResturantRating>
+        <Rating>4</Rating>
+        <Author>Daniel</Author>
+        <Comments>Fast Service, Cheap food but so good.</Comments>
+      </ResturantRating>
+      <ResturantRating>
+        <Rating>4</Rating>
+        <Author>Caitlyn</Author>
+        <Comments />
+      </ResturantRating>
+      <ResturantRating>
+        <Rating>1</Rating>
+        <Author>Tamera</Author>
+        <Comments>Found my car! I'm so happy</Comments>
+      </ResturantRating>
+    </Ratings>
+    <Name>Alberto's Fine Crusine</Name>
+    <Location>521 S. Main st</Location>
+    <FoodType>Mexican</FoodType>
+  </Resturant>
+  <Resturant>
+    <Ratings>
+      <ResturantRating>
+        <Rating>4</Rating>
+        <Author>Rusty</Author>
+        <Comments>Food was GREAT, but super long wait</Comments>
+      </ResturantRating>
+      <ResturantRating>
+        <Rating>4</Rating>
+        <Author>Tammy</Author>
+        <Comments>Hot Food, Cold Drinks.. Great Experence</Comments>
+      </ResturantRating>
+      <ResturantRating>
+        <Rating>1</Rating>
+        <Author>Tamera</Author>
+        <Comments>Good Food, Chow min was great</Comments>
+      </ResturantRating>
+    </Ratings>
+    <Name>The Wok</Name>
+    <Location>714 Gothard st</Location>
+    <FoodType>Thai</FoodType>
+  </Resturant>
+</ArrayOfResturant>
