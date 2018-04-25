@@ -19,7 +19,7 @@ namespace Business.Layer
     }
     public class Resturant
     {
-        //public C { get; }
+       
         public string Name { get; set; }
         public string Location { get; set; }
         public string FoodType { get; set; }
@@ -43,7 +43,7 @@ namespace Business.Layer
         
         public void AddRating(ResturantRating r)
         {
-            //if(Ratings == null)Ratings = new List<ResturantRating>();
+            
             Ratings.Add(r);
         }
         

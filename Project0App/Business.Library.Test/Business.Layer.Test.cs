@@ -108,6 +108,7 @@ namespace Business.Library.Test
         public void TestReturnFromPartial()
 
         {
+            //Arrange
             BusinessLayer bl = new BusinessLayer();
             Serializer.InputFile = "\\revature\\hardy-daniel-project0\\Project0App\\Resturants.XML";
             list = Serializer.Deserialize();
@@ -120,8 +121,13 @@ namespace Business.Library.Test
             r.AddRating(new ResturantRating(1, "Tammy", "Hot Food, Cold Drinks.. Great Experence"));
             r.AddRating(new ResturantRating(1, "Tamera", "Good Food, Chow min was great"));
             expected.Add(r);
-            List<Resturant> partial = bl.ReturnFromPartial(list, "The W");
-            Assert.AreEqual(r.Name, list[0].Name);
+            //Action
+            List<Resturant> partial = bl.ReturnFromPartial(list, "The");
+
+            //Assert
+            //System.Console.WriteLine("----- Unit test: partial[0] = {0}",partial[0].Name);
+            //Assert.AreEqual(1.0,1.0);
+            Assert.AreEqual(expected[0].Name, partial[0].Name);
         }
    
     }

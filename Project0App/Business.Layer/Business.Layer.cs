@@ -42,7 +42,7 @@ namespace Business.Layer
         }
         public List<Resturant> ReturnFromPartial(List<Resturant> list, string str)
         {
-            List<Resturant> returnList = (List<Resturant>)list.Where(x => x.Name.StartsWith(str));
+            List<Resturant> returnList = (List<Resturant>)list.Where(x => x.Name.Contains(str)).ToList<Resturant>();
             return returnList;
         }
 
