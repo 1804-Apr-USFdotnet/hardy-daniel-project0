@@ -8,9 +8,11 @@ namespace Client
 {
     class Program
     {
+        
         static BusinessLayer.BusinessLibrary bm = new BusinessLayer.BusinessLibrary();
         static Models.Resturant resturant;
         static List<Models.Resturant> list;
+        static List<Models.Resturant> top3Resturants;
 
         static void getAllResturants()
         {
@@ -51,20 +53,64 @@ namespace Client
                 Console.WriteLine(rev.Comment + "\n\r\n\r\n\r");
             }
         }
+        static void showAllResturantsByName()
+        {
+            list = bm.getResturantsbyName();
+            showResturants();
+            
+        }
+
+        static void showAllResturantsByState()
+        {
+            list = bm.getResturantsbyState();
+            showResturants();
+
+        }
+
+        static void searchForAResturant()
+        {
+            Console.WriteLine("Enter a name or a partial to search for");
+            String str = Console.ReadLine();
+            var partialList = bm.SearchRestutants(str);
+
+            Console.WriteLine("Here are the Results:\n\r");
+
+            foreach (var rest in partialList)
+            {
+                Console.WriteLine("{0} {1} {2} {3} {4}",rest.Name,rest.Address,rest.City,rest.State,rest.FoodType);
+            }
+        }
+
+        static void showTheTop3Resturants()
+        {
+            var top = bm.getTopResturants();
+            foreach (var rest in top)
+            {
+                Console.WriteLine("{0}\n\r{1} {2} {3} {4} Average Rating: {5}\n\r", rest.Name, rest.Address, rest.City, rest.State, rest.FoodType, rest.getAverageRating());
+            }
+        }
+
         static void Main(string[] args)
         {
-            //Console.WriteLine("Hello World!!!!");
+           
             getAllResturants();
-            //showResturants();
             bool quit = false;
             Console.WriteLine("Welcome to Daniel's Project0");
+            
             while (!quit)
             {
-                Console.WriteLine("Press 1: To view the resturants\n\rPress 2: To view details of a Resturant\n\rPress 3: to view Reviews for a Resturant");
+                Console.WriteLine("Press 1: To view the resturants\n\r" +
+                    "Press 2: To view details of a Resturant\n\r" +
+                    "Press 3: To view Reviews for a Resturant\n\r" +
+                    "Press 4: To Sort the Resturants by Name\n\r" +
+                    "Press 5: To Sort the Resturants by State\n\r" +
+                    "Press 6: To See the Top 3 rated Resturants\n\r" +
+                    "Press 7: To Search Resturants");
                 String input = Console.ReadLine();
                 int userChoice = int.Parse(input);
-
-                switch(userChoice)
+                var logger = NLog.LogManager.GetCurrentClassLogger();
+                logger.Info("User choose " + userChoice);
+                switch (userChoice)
                 {
                     case 1:
                         {
@@ -81,6 +127,26 @@ namespace Client
                             showAllReviewForResturant();
                             break;
                         }
+                    case 4:
+                        {
+                            showAllResturantsByName();
+                            break;
+                        }
+                    case 5:
+                        {
+                            showAllResturantsByState();
+                            break;
+                        }
+                    case 6:
+                        {
+                            showTheTop3Resturants();
+                            break;
+                        }
+                    case 7:
+                        {
+                            searchForAResturant();
+                            break;
+                        }
                     default:
                         {
                             Console.WriteLine("Invalid input");
@@ -94,12 +160,7 @@ namespace Client
                 char.TryParse(userInput, out Choice);
                 if (Choice == 'y' || Choice == 'Y') quit = true;
             }
-            //Console.WriteLine("Enter a number to view the reviews from that resturant");
-            //String input = Console.ReadLine();
-            //int userChoice = int.Parse(input);
-            //resturant = GetResturant(userChoice);
-            //showAllReviewForResturant(resturant);
-            //Console.Read();
+            
         }
     }
 }

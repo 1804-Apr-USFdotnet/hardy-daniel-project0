@@ -40,7 +40,7 @@ namespace BusinessLayer
         public List<Models.Resturant> SearchRestutants(string partial)
         {
             List<Models.Resturant> tmp = data.GetResturants().ToList();
-            List<Models.Resturant> results = tmp.Where(x => x.Name.StartsWith(partial)).ToList();
+            List<Models.Resturant> results = tmp.Where(x => x.Name.Contains(partial)).ToList();
             return results;
         }
 

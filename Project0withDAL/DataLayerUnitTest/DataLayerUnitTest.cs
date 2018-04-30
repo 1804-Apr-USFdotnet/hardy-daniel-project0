@@ -14,12 +14,14 @@ namespace DataLayerUnitTest
         [TestMethod]
         public void TestMapping()
         {
+         
             Models.Resturant r = new Models.Resturant();
             DataLayer.Resturant r1 = new DataLayer.Resturant();
             Models.Resturant tmp = DataLayer.DataManager.DataToModel(r1);
             DataLayer.Resturant tmp1 = DataLayer.DataManager.ModelToData(r);
             Assert.AreEqual(r.GetType(), tmp.GetType());
             Assert.AreEqual(r1.GetType(), tmp1.GetType());
+
         }
 
         [TestMethod]
@@ -53,6 +55,7 @@ namespace DataLayerUnitTest
             BusinessLibrary bl = new BusinessLibrary();
             var list = bl.getTopResturants();
             Assert.AreEqual("Gino's", list[0].Name);
+          
         }
         [TestMethod]
         public void TestBLGetResturantsByState()
