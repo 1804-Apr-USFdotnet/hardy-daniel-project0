@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace Client
         static Models.Resturant resturant;
         static List<Models.Resturant> list;
         static List<Models.Resturant> top3Resturants;
-
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         static void getAllResturants()
         {
             list = bm.getAllResturants();
@@ -107,9 +108,9 @@ namespace Client
                     "Press 6: To See the Top 3 rated Resturants\n\r" +
                     "Press 7: To Search Resturants");
                 String input = Console.ReadLine();
+                logger.Warn("User has entered " + input);
                 int userChoice = int.Parse(input);
-                var logger = NLog.LogManager.GetCurrentClassLogger();
-                logger.Info("User choose " + userChoice);
+                
                 switch (userChoice)
                 {
                     case 1:
