@@ -108,7 +108,7 @@ namespace Client
                     "Press 6: To See the Top 3 rated Resturants\n\r" +
                     "Press 7: To Search Resturants");
                 String input = Console.ReadLine();
-                logger.Warn("User has entered " + input);
+                logger.Info("User has entered " + input);
                 int userChoice = int.Parse(input);
                 
                 switch (userChoice)
